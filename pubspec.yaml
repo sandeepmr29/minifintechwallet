@@ -67,10 +67,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  integration_test:
+    sdk: flutter
   json_serializable: ^6.6.1
   build_runner: ^2.4.5
   mockito: 5.6.3
   bloc_test: 10.0.0
+  mocktail: ^1.0.4
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

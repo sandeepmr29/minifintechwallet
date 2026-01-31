@@ -7,7 +7,7 @@
   "password_text": "Password",
   "login_text": "Login",
   "create_account_text": "Create Account",
-  "already_account_text": "Already have an account? Login",
+  "login_account_text": "Login to your account",
   "register_start_text": "Register to get started",
   "name_text": "Name",
   "email_text": "Email",

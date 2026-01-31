@@ -89,7 +89,7 @@ class LoginPage extends StatelessWidget {
                               ),
                               const SizedBox(height: 16),
                               Text(
-                                'Login to your account',
+                                'login_account_text'.tr(),
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyMedium
@@ -99,7 +99,7 @@ class LoginPage extends StatelessWidget {
                               TextField(
                                 controller: emailController,
                                 decoration: InputDecoration(
-                                  labelText: 'Email',
+                                  labelText: 'email_text'.tr(),
                                   prefixIcon:
                                   Icon(Icons.email, color: primaryColor),
                                   focusedBorder: OutlineInputBorder(
