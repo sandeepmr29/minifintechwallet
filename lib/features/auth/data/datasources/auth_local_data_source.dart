@@ -1,24 +1,19 @@
 import '../../../../core/security/token_manager.dart';
 import '../../domain/entities/user.dart';
 
-
-/// Handles local storage of authentication data
 class AuthLocalDataSource {
   final TokenManager tokenManager;
 
   AuthLocalDataSource({required this.tokenManager});
 
-  /// Save user token locally after login
   Future<void> saveToken(String token) async {
     await tokenManager.saveToken(token);
   }
 
-  /// Get stored token
   Future<String?> getToken() async {
     return await tokenManager.getToken();
   }
 
-  /// Delete token (logout)
   Future<void> deleteToken() async {
     await tokenManager.deleteToken();
   }

@@ -1,7 +1,7 @@
 import '../entities/user.dart';
 import '../repositories/auth_repository.dart';
 
-/// Use case to log in a user
+
 class LoginUser {
   final AuthRepository repository;
 

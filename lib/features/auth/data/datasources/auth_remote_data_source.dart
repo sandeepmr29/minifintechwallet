@@ -11,12 +11,7 @@ class AuthRemoteDataSource {
   Future<String> login(String email, String password) async {
     // Simulate network delay
     await Future.delayed(const Duration(seconds: 2));
-/*
-    // Simulate random failure (20% chance)
-    if (_random.nextInt(100) < 20) {
-      throw Exception('Network error. Please try again.');
-    }
-*/
+
     // Return a mock token
     return 'mock_token_12345';
   }
@@ -26,12 +21,6 @@ class AuthRemoteDataSource {
     // Simulate network delay
     await Future.delayed(const Duration(seconds: 1));
 
-    // Simulate random failure (10% chance)
-    /*
-    if (_random.nextInt(100) < 10) {
-      throw Exception('Network error during logout.');
-    }
-*/
-    // Success: do nothing
+
   }
 }

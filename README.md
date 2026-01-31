@@ -32,4 +32,4 @@ open project in android studio and can run in android device
 ### Known Limitations
 
 No real backend integration (API is mocked / planned)
-Tested in android only, not tested in web and iOS
+Tested in android device only ,not tested in iOS and web

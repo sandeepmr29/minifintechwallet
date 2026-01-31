@@ -6,10 +6,6 @@ import '../../domain/entities/transaction.dart';
 import '../bloc/wallet_bloc.dart';
 import '../bloc/wallet_event.dart';
 
-
-
-
-
 class TransactionPage extends StatefulWidget {
   const TransactionPage({super.key});
 
@@ -51,24 +47,24 @@ class _TransactionPageState extends State<TransactionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Transaction',style: TextStyle(
-          color: Colors.white
-        ),),
+        title: const Text(
+          'Add Transaction',
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: primaryColor,
       ),
       body: Stack(
         children: [
           // Professional neutral background
-          Container(
-            color: Colors.grey[100],
-          ),
+          Container(color: Colors.grey[100]),
           Center(
             child: SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24.0),
                 child: Card(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16)),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                   elevation: 8,
                   shadowColor: Colors.black26,
                   child: Padding(
@@ -80,20 +76,21 @@ class _TransactionPageState extends State<TransactionPage> {
                         children: [
                           Text(
                             'New Transaction',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineSmall
+                            style: Theme.of(context).textTheme.headlineSmall
                                 ?.copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black87),
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black87,
+                                ),
                           ),
                           const SizedBox(height: 16),
                           TextFormField(
                             controller: _amountController,
                             decoration: InputDecoration(
                               labelText: 'Amount',
-                              prefixIcon: Icon(Icons.attach_money,
-                                  color: primaryColor),
+                              prefixIcon: Icon(
+                                Icons.attach_money,
+                                color: primaryColor,
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
                                 borderSide: BorderSide(color: primaryColor),
@@ -103,9 +100,9 @@ class _TransactionPageState extends State<TransactionPage> {
                                 borderSide: BorderSide(color: primaryColor),
                               ),
                             ),
-                            keyboardType:
-                            const TextInputType.numberWithOptions(
-                                decimal: true),
+                            keyboardType: const TextInputType.numberWithOptions(
+                              decimal: true,
+                            ),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return 'Please enter an amount';
@@ -122,9 +119,13 @@ class _TransactionPageState extends State<TransactionPage> {
                             value: _transactionType,
                             items: const [
                               DropdownMenuItem(
-                                  value: 'credit', child: Text('Credit')),
+                                value: 'credit',
+                                child: Text('Credit'),
+                              ),
                               DropdownMenuItem(
-                                  value: 'debit', child: Text('Debit')),
+                                value: 'debit',
+                                child: Text('Debit'),
+                              ),
                             ],
                             onChanged: (value) {
                               setState(() {
@@ -133,8 +134,10 @@ class _TransactionPageState extends State<TransactionPage> {
                             },
                             decoration: InputDecoration(
                               labelText: 'Transaction Type',
-                              prefixIcon: Icon(Icons.swap_horiz,
-                                  color: primaryColor),
+                              prefixIcon: Icon(
+                                Icons.swap_horiz,
+                                color: primaryColor,
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
                                 borderSide: BorderSide(color: primaryColor),
@@ -152,14 +155,17 @@ class _TransactionPageState extends State<TransactionPage> {
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12)),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
                                 backgroundColor: primaryColor,
                               ),
                               onPressed: _submitTransaction,
                               child: const Text(
                                 'Add Transaction',
                                 style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ),

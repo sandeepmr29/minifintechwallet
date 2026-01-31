@@ -20,13 +20,13 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<User> login(String email, String password) async {
     try {
-      // Call remote API
+
       final token = await remoteDataSource.login(email, password);
 
-      // Save token locally
+
       await localDataSource.saveToken(token);
 
-      // Return user entity (mocked)
+
       final user = User(id: '1', email: email, name: 'sandeep');
       return user;
     } catch (e) {

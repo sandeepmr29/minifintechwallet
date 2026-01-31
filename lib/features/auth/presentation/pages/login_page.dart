@@ -30,8 +30,9 @@ class LoginPage extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    primaryColor.withOpacity(0.9),
-                    primaryColor.withOpacity(0.6),
+                    primaryColor.withAlpha(230), // ~90%
+                    primaryColor.withAlpha(153),
+
                     const Color(0xFFF5F5F5), // soft off-white bottom
                   ],
                   begin: Alignment.topLeft,
