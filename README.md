@@ -1,16 +1,35 @@
-# miniwalletfintechapp
+# Mini Fintech Wallet App
 
-A new Flutter project.
+A sample Flutter-based fintech wallet application designed to demonstrate
+production-grade architecture, state management, and scalability principles.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📦 Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter** (Mobile, Web, Desktop)
+- **BLoC** for state management
+- **Clean Architecture** principles
+- Local storage (planned)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+---
+
+## ⚙️ Setup Instructions
+
+### Prerequisites
+- Flutter SDK (latest stable)
+- Dart SDK
+- Android Studio 
+- Emulator or physical device
+
+### Steps to Run
+
+git clone https://github.com/sandeepmr29/minifintechwallet.git
+open project in android studio and can run in android device
+
+### Known Limitations
+
+No real backend integration (API is mocked / planned)
+Tested in android only, not tested in web and iOS
